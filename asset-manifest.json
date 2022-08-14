@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/To_do_list/static/css/main.9614c3d5.chunk.css",
+    "main.js": "/To_do_list/static/js/main.a49b6983.chunk.js",
+    "main.js.map": "/To_do_list/static/js/main.a49b6983.chunk.js.map",
+    "runtime-main.js": "/To_do_list/static/js/runtime-main.42492c67.js",
+    "runtime-main.js.map": "/To_do_list/static/js/runtime-main.42492c67.js.map",
+    "static/js/2.ceab69ac.chunk.js": "/To_do_list/static/js/2.ceab69ac.chunk.js",
+    "static/js/2.ceab69ac.chunk.js.map": "/To_do_list/static/js/2.ceab69ac.chunk.js.map",
+    "index.html": "/To_do_list/index.html",
+    "static/css/main.9614c3d5.chunk.css.map": "/To_do_list/static/css/main.9614c3d5.chunk.css.map",
+    "static/js/2.ceab69ac.chunk.js.LICENSE.txt": "/To_do_list/static/js/2.ceab69ac.chunk.js.LICENSE.txt",
+    "static/media/003-edit.0851a9cb.svg": "/To_do_list/static/media/003-edit.0851a9cb.svg",
+    "static/media/007-trash-1.c49a10b9.svg": "/To_do_list/static/media/007-trash-1.c49a10b9.svg",
+    "static/media/add.4c0ab963.svg": "/To_do_list/static/media/add.4c0ab963.svg",
+    "static/media/alarm-clock.741fa381.svg": "/To_do_list/static/media/alarm-clock.741fa381.svg",
+    "static/media/App.css": "/To_do_list/static/media/main__ibg.e4aa9343.jpg",
+    "static/media/mark.5e230a9b.svg": "/To_do_list/static/media/mark.5e230a9b.svg",
+    "static/media/square.654a649f.svg": "/To_do_list/static/media/square.654a649f.svg",
+    "static/media/timer.3e7f645b.svg": "/To_do_list/static/media/timer.3e7f645b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42492c67.js",
+    "static/js/2.ceab69ac.chunk.js",
+    "static/css/main.9614c3d5.chunk.css",
+    "static/js/main.a49b6983.chunk.js"
+  ]
+}
