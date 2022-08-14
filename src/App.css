@@ -1,0 +1,513 @@
+/* CSS default */
+
+
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+
+/*--------------------*/
+
+.bigred {
+    font-size: 20px;
+    color: red;
+}
+
+
+/* CSS default */
+
+.wrapper {
+    padding: 15px 5px 15px 5px;
+    background: url('./img/main__ibg.jpg') center / cover no-repeat;
+    min-height: 100vh;
+}
+
+.App {
+    text-align: center;
+}
+
+li {
+    margin: 0 0 25px 0;
+}
+
+li .note__text {
+    width: 300px;
+    padding: 4px;
+    display: inline-block;
+    cursor: default;
+    word-wrap: break-word;
+}
+
+.notes__list__wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Change note Style */
+
+.changeInput {
+    padding: 7px;
+    border-radius: 11px;
+    width: max-content;
+    overflow: auto;
+    resize: none;
+    width: 250px;
+    /* height: 30px; */
+    background: #f6f6f6;
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    padding: 7px 15px 7px 10px;
+    overflow: hidden;
+}
+
+.changeInput:focus {
+    border: none
+}
+
+.change__note__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+/*  */
+
+.inputAddNote {
+    width: 200px;
+    background: #f6f6f6;
+    border: 1px solid #cecece;
+    border-radius: 8px;
+    padding: 7px 15px 7px 10px;
+    overflow: hidden;
+    height: 32px;
+    resize: none;
+    margin: 21px 0;
+}
+
+.button__hover {
+    border: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    bottom: 3px;
+    background: initial;
+}
+
+.button__hover img {
+    width: 17px;
+}
+
+.square {
+    width: 17px;
+    height: 17px;
+    bottom: 3px;
+    position: absolute;
+    right: 3px;
+    background: white;
+    border: none;
+    z-index: 40;
+    overflow: hidden
+}
+
+.square__img {
+    width: 17px;
+    position: relative;
+    z-index: 20;
+}
+
+.mark {
+    position: absolute;
+    left: 0px;
+    z-index: 5;
+    width: 17px;
+    height: 17px;
+    top: 0px;
+    transform: rotate( 10deg);
+}
+
+.mark__cover {
+    position: absolute;
+    width: 21px;
+    height: 16px;
+    top: 0px;
+    left: 0px;
+    background: white;
+    z-index: 10;
+}
+
+.square:hover .mark__cover {
+    animation: openMark 2s ease .2s 1 normal forwards;
+}
+
+@keyframes openMark {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100px;
+    }
+}
+
+
+/* Style for finished note */
+
+.note__li.finished .square .mark__cover {
+    display: none;
+}
+
+.note__li.finished .square {
+    opacity: 1;
+}
+
+.note__li.finished .note__text {
+    text-decoration: line-through;
+}
+
+.note__li.finished .button__change,
+.note__li.finished .button__clock {
+    display: none;
+}
+
+.note__li.finished .note__wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px 5px 0 0;
+}
+
+
+/* button Note pencil */
+
+.button__change {
+    margin: 0 2px 0 0;
+    left: 5px;
+}
+
+.button__clock {
+    left: 30px;
+}
+
+.button__delete {
+    right: 27px;
+}
+
+.note__wrapper:hover .button__hover {
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.note__li {
+    min-height: 32px;
+}
+
+.note__wrapper {
+    border-bottom: 7px double #000;
+    display: inline-flex;
+    align-items: center;
+    /* border-radius: 11px; */
+    background: linear-gradient(90deg, #55D9CF, #55D9CF);
+    padding: 1px 1px 1px 1px;
+    position: relative;
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0% calc(100% + 5px);
+}
+
+.note__wrapper.without__timer {
+    background: none;
+    border-bottom: 1px solid #000;
+}
+
+.note__wrapper.none {
+    border: none;
+    padding: 0px;
+}
+
+
+/* .note__wrapper.none::after {
+    display: none;
+}
+
+.note__wrapper:not(.without__timer)::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: green;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    z-index: -1;
+} */
+
+
+/* Button save  */
+
+.save__button {
+    margin: 0px 0px 0px 6px;
+    border-radius: 5px;
+    padding: 4px 6px 4px 6px;
+    border: 1.2px solid #000;
+    background: #f6f6f6;
+    transition: all 0.3s ease 0s;
+}
+
+.save__button:hover {
+    background-color: lawngreen;
+}
+
+
+/* Add note */
+
+.addNote___wrapper {
+    margin: 0 0 25px 39%;
+    display: flex;
+    align-items: center;
+}
+
+.addNote__button {
+    align-self: center;
+    margin: 0 7px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #55D9CF;
+    padding: 4px;
+    line-height: 1;
+    background: #f6f6f6;
+    transition: all 0.2s ease 0s;
+    font-size: 14px;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.addNote__button:hover {
+    background: aliceblue;
+    transform: scale(1.05);
+    line-height: 1;
+}
+
+.addTimer__button {
+    margin: 0px;
+}
+
+.addNote__button img {
+    width: 20px;
+    margin: 0 0 0 5px;
+}
+
+.setting__time input {}
+
+.add__timer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    background: rgba(127, 255, 212, 0.4);
+    font-family: monospace;
+    padding: 2px 9px;
+    border-radius: 5px;
+}
+
+.timer__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.timer__time input {
+    width: 35px;
+    margin: 0 0 0 7px;
+}
+
+
+/* Style note header */
+
+.notesList h3 {
+    margin: 0 0 20px 0;
+    border: 1px solid #000;
+    padding: 4px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+}
+
+.notesList {
+    list-style-type: none;
+    font-family: monospace;
+    border: 2px solid #8B6A77;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 350px;
+    min-height: 100px;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Note time */
+
+.note__time.showTime {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0.5;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 1);
+}
+
+embed {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* Tupoi */
+
+
+/* .cover__change__note {
+    background: rgba(0, 0, 0, .6);
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+} */
+
+
+/* change time in timer */
+
+.change__time input {
+    width: 35px;
+    opacity: 1;
+}
+
+.change__time {
+    position: absolute;
+    width: 258px;
+    left: 50%;
+    transform: translate(0px, 0px);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.change__time button {
+    display: flex;
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0 0 0;
+}
+
+.change__time__cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.setting__time__wrapper {
+    display: flex;
+    font-family: monospace;
+    border-radius: 5px;
+}
